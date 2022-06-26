@@ -151,11 +151,11 @@ table {
 }
 
 
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Noto+Sans:wght@500&family=Outfit:wght@300&family=Pacifico&family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Didact+Gothic&family=Noto+Sans:wght@500&family=Outfit:wght@300&family=Pacifico&family=Poppins:wght@200&display=swap");
 /* END RESET */
 
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   background-color: #7f5a83;
 background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 color: #1bb3faf3;
@@ -216,6 +216,10 @@ flex-direction: column;
 gap: 20px;
 }
 
+.about-container .text p {
+  color: white;
+  font-size: 25px;
+}
 .pages-container{
   margin: 120px 60px;
 }
@@ -303,7 +307,7 @@ color: var(--lightGreen);
 
   .judul-span.judul span{
     color: var(--lightGreen);
-    font-size: 40px;
+    font-size: 50px;
     gap: 25px;
     padding: 0;
     font-weight: bold;
@@ -1209,6 +1213,7 @@ background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
   }
   .name-title .name{
     font-size: 85px;
+    font-family: 'Didact Gothic', sans-serif;
     }
   
     .name-title .name:hover{

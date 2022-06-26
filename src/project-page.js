@@ -64,7 +64,7 @@ class ProjectPage extends React.Component {
 </p>
               </div>
             <h2 className="sub-judul">
-              We have completed many amazing projects that you will not believe
+             A small gallery of my recent projects.
             </h2>
           </div>
           <div className="project-inner">

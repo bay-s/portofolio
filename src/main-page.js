@@ -163,11 +163,8 @@ this.setState({
 </p>
               </div>
        <div className='text'>
-     <p>Nama saya Bayu. Lahir di Bekasi 1994 , saya telah belajar web programming sejak awal 2019 hingga saat ini.</p>
-   <p>Sejak awal 2021 saya telah menjalani karir sebagai seorang freelancer,
-    saat ini saya sedang Magang di sebuah perusahaan Start Up untuk posisi Front End.
-   </p>
-    <p>Hobby saya selain programming , saya juga senang bermain Game khususnya game J-RPG classic</p>
+     <p>I love Programming, Technology,</p>
+   <p>Story and  Games.</p>
      </div>
        <button className="hvr-sweep-to-right">
               <Link to="/about/">View More</Link>

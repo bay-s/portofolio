@@ -40,22 +40,23 @@ function AboutPage (){
    <div className='title' >
    <div className="judul-span judul " data-aos="fade-up">
 <p>
-                <span className="hvr-wobble-vertical">A</span>
-                <span className="hvr-wobble-vertical">b</span>
+                <span className="hvr-wobble-vertical">W</span>
+                <span className="hvr-wobble-vertical">h</span>
                 <span className="hvr-wobble-vertical">o</span>
-                <span className="hvr-wobble-vertical">u</span>
-                <span className="hvr-wobble-vertical">t</span>
+
 </p>
 <p>
+  <span className="hvr-wobble-vertical">i</span>
+</p>
+<p>
+                <span className="hvr-wobble-vertical">A</span>
                 <span className="hvr-wobble-vertical">m</span>
-                <span className="hvr-wobble-vertical">e</span>
 </p>
               </div>
      <div className='text'>
-     <p>Nama saya Bayu. Lahir di Bekasi 1994 , saya telah belajar web programming sejak awal 2019 hingga saat ini.</p>
-   <p>Sejak awal 2021 saya telah menjalani karir sebagai seorang freelancer,
-    saat ini saya sedang Magang di sebuah perusahaan Start Up untuk posisi Front End.
-   </p>
+     <p>Born in Bekasi in 1994.</p>
+   <p>Since 2020, he has also started working as a Web Developer and Wordpress as an freelancer.</p>
+   <p>He also learning NodeJS and looking forward to be a Full Stack Web Developer.</p>
      </div>
    </div>
 </div>
