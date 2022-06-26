@@ -177,12 +177,7 @@ border: 1px solid rgba(127, 90, 131, 0.23);
   transform: translateY(-669px);
   }
 
-  .opens{
-    transform: translateY(0);
-    background-color: #7f5a83;
-    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
-  }
-  
+
   .box ul{
     display: flex;
     margin-top: 100px;
@@ -258,6 +253,12 @@ font-size: 25px;
     
     .header{
       margin: 0 25px;
+    }
+    
+    .opens{
+      transform: translateY(0);
+      background-color: #7f5a83;
+      background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
     }
     
   }

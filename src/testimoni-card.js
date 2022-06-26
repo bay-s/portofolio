@@ -49,7 +49,8 @@ if(respon){
      <div className='testimoni-container'>
 
         { this.state.loading ? this.state.data.map(item => {
-        	return <div className="skeleton-card">
+
+        	return <div className="skeleton-card" key={item.id}>
             <div className="card-img skeleton">
             </div>
             <div className="card-body">

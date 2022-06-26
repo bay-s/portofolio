@@ -14,7 +14,7 @@ import Footer from './footer';
 function AboutPage (){
 
    const data = {
-    serviceData:["Convert Design to HTML","Create Landing Page","Create Company Profile","Maintenance Website","Convert HTML to Wordpress Theme","Responsive Web Design"],
+    serviceData:["Convert Design to HTML","Create Landing Page","Create Company Profile","Maintenance Website","Convert HTML to Wordpress Theme","Responsive Web Design","Create Custom Wordpress Themes"],
     skillSet:[jqueryIco,jsIco,htmlIco,cssIco,bootIco,fireIco,wordpIco,reactIco],
     skillTxt:["Jquery","JavaScript","HTML","CSS","Bootstrap","Firebase","Wordpress","React"]
    }
@@ -90,7 +90,6 @@ const text= data.skillTxt[index]
 </div>
   </div>      
 </div>
-<Footer />
 </>
     )
 }

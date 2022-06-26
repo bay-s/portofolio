@@ -12,6 +12,7 @@ import NotFound from './404not';
 // import './templatemo-style.css'
 import './header.css';
 import './contact.css';
+import Footer from './footer';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
               <Route path='/project/' element={<ProjectPage />} />
               <Route path='*' element={<NotFound />} />
             </Routes>
+          <Footer />
     </Router>
     </div>
     

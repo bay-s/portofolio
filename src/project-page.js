@@ -3,7 +3,7 @@ import React from "react";
 import ModalImage from "./modal";
 import movie from "./img/react-movie.png";
 import webSd from "./img/website-sd.png";
-import img1 from "./img/test.jfif"
+import theme  from "./img/screenshot.png"
 import img2 from "./img/test1.jfif"
 import img3 from "./img/test3.jfif"
 import img4 from "./img/ramayana.png"
@@ -17,12 +17,12 @@ class ProjectPage extends React.Component {
     this.state = {
       images: "",
       modal: false,
-      link:["https://sdmasjidsyuhada.sch.id/","https://bay-s.github.io/","#","#","#","#","#","#"],
-      img:[movie,webSd,img1,img2,img3,img4,img5,img6],
-      judul:['React Movie App','Website SD','lorem ipsum app','Lorem ipsum, dolor',' Quibusdam odio','adipisci cupiditate. Minima!','voluptate nesciunt','voluptate nesciunt beatae earum'],
+      link:["https://sdmasjidsyuhada.sch.id/","https://bay-s.github.io/","https://github.com/bay-s/tema-wordpress-1","#","#","#","#","#"],
+      img:[movie,webSd,theme,img2,img3,img4,img5,img6],
+      judul:['React Movie App','Website SD','Tema Wordpress','Lorem ipsum, dolor',' Quibusdam odio','adipisci cupiditate. Minima!','voluptate nesciunt','voluptate nesciunt beatae earum'],
       desc:['Personal Project dibuat dengan React dan TMDB API','Website SD berbasis Wordpress',
-      'Lorem ipsum, dolor sit amet consectetur','illo voluptate nesciunt beatae earum',' beatae earum quo adipisci cupiditate. Minima!','ipsum alias incidunt sed explicabo velit nostrum,',' Quibusdam odio, a dolore voluptatem, accusamus','earum quo adipisci cupiditate. Minima'],
-      status:['Publish','Publish','N/A','N/A','N/A','N/A','N/A','On progress']
+      'Tema wordpress','illo voluptate nesciunt beatae earum',' beatae earum quo adipisci cupiditate. Minima!','ipsum alias incidunt sed explicabo velit nostrum,',' Quibusdam odio, a dolore voluptatem, accusamus','earum quo adipisci cupiditate. Minima'],
+      status:['Publish','Publish','Publish','N/A','N/A','N/A','N/A','On progress']
     };
   }
 
@@ -85,7 +85,7 @@ class ProjectPage extends React.Component {
                <div class="card__header">
                  <div class="card__header-text">
                    <h3 class="card__title">
-                     <a href={link} >
+                     <a href={link}  target="_blank">
                       {name}
                      </a>
                    </h3>
