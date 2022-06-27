@@ -7,10 +7,14 @@ class Contact extends React.Component {
     this.state = {
       formRef: React.createRef(null),
       name: "",
+      subject:"",
+      email:"",
+      message:"",
       intervalId: setInterval(() => {}, 1000),
       loading:false,
       sukses:null,
-      message:''
+      messages:'',
+      suksesMsg:''
     };
   }
 
@@ -18,7 +22,7 @@ class Contact extends React.Component {
     AOS.init();
     this.setState({
       intervalId:this.state.intervalId = setInterval(() => {
-        this.setState({ message: (this.state.message = '') })
+        this.setState({ messages: (this.state.messages = '') })
         return () => clearInterval(this.state.intervalId)
       }, 10000)
     })
@@ -26,7 +30,7 @@ class Contact extends React.Component {
   }
 
   componentDidUpdate(){
-    if(this.state.message > 0){
+    if(this.state.messages.length > 0){
       console.log("Test");
     }
   }
@@ -34,37 +38,59 @@ class Contact extends React.Component {
 
   InputText = (e) => {
     const { name, value } = e.target;
-    this.setState({ name: value });
+    console.log(value);
+    this.setState({[ name]: value });
+    console.log(name);
     console.log(this.state.name);
   };
-  sendMessage = (e) => {
-    e.preventDefault();
+
+  sendMessage = () => {
     const formRef = this.state.formRef;
-    if (this.state.name.length < 8) {
-      console.log(formRef.current);
-    } else {
+    
       this.setState({loading:this.state.loading = true})
       const scriptUrl = `https://script.google.com/macros/s/AKfycbxKbGQXTjkq4NKgLqbT75rpXD4EsO6RGnRS7eZbDOc0yFfndhEiTHbJ3prQDw5e3FajlA/exec`;
       fetch(scriptUrl, { method: "POST", body: new FormData(formRef.current) })
         .then((res) => {
           alert("SUCCESSFULLY SUBMITTED");
-          e.target.reset();
           this.setState({
             loading:this.state.loading = false,
             sukses:this.state.sukses = true,
-            message:this.state.message = 'Your message was sent, thank you!'
+            messages:this.state.messages = 'Your message was sent, thank you!',
+            suksesMsg:this.state.suksesMsg =  'Your message was sent, thank you!'
           })
         })
         .catch((err) => {
           this.setState({
             sukses:this.state.sukses = false,
-            message:this.state.message = err
+            messages:this.state.messages = err
           })
         })
-    }
+    
   };
 
-
+Validasi = e => {
+e.preventDefault()
+  if(this.state.name.length < 8){
+    this.setState({
+      messages:this.state.messages = "Name atleast 8 character"
+    })
+  }else if(this.state.email.length < 12){
+    this.setState({
+      messages:this.state.messages = "Email atleast 12 character"
+    })
+  }else if(this.state.subject.length < 10){
+    this.setState({
+      messages:this.state.messages = "Subject atleast 10 character"
+    })
+  }else if(this.state.message.length < 12){
+    this.setState({
+      messages:this.state.messages = "Messages atleast 12 character"
+    })
+  }else{
+this.sendMessage()
+e.target.reset();
+  }
+}
   render() {
     return (
       <div className="contact-page">
@@ -101,16 +127,15 @@ class Contact extends React.Component {
                     <div className="contact-wrap w-100 p-lg-5 p-4">
                       <h3 className="mb-4">Send me a message</h3>
                {this.state.sukses ? <div id="form-message-success" className="mb-4">
-                   {this.state.message}
+                   {this.state.messages}
                     </div> : <div id="form-message-warning" className="mb-4">
-                      {this.state.message}
+                      {this.state.messages}
                     </div>}
-    
                       <form
                         ref={this.state.formRef}
                         name="contactForm"
                         className="contactForm"
-                        onSubmit={this.sendMessage}
+                        onSubmit={this.Validasi}
                       >
                         <div className="row">
                           <div className="col-md-12">
