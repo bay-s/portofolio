@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './index.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 import 'font-awesome/css/font-awesome.min.css';
