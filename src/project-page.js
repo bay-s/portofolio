@@ -39,7 +39,6 @@ class ProjectPage extends React.Component {
     intervalId:this.state.intervalId = setInterval(() => {
       const imgRef = this.state.imgRef.current
       imgRef.classList.remove('fadez')
-      console.log("ahalo");
     return () => clearInterval(this.state.intervalId);
     }, 1500)
     })
