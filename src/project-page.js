@@ -22,27 +22,82 @@ class ProjectPage extends React.Component {
       judul:['React Movie App','Website SD','Tema Wordpress','Lorem ipsum, dolor',' Quibusdam odio','adipisci cupiditate. Minima!','voluptate nesciunt','voluptate nesciunt beatae earum'],
       desc:['Personal Project dibuat dengan React dan TMDB API','Website SD berbasis Wordpress',
       'Tema wordpress','illo voluptate nesciunt beatae earum',' beatae earum quo adipisci cupiditate. Minima!','ipsum alias incidunt sed explicabo velit nostrum,',' Quibusdam odio, a dolore voluptatem, accusamus','earum quo adipisci cupiditate. Minima'],
-      status:['Publish','Publish','Publish','N/A','N/A','N/A','N/A','On progress']
+      status:['Publish','Publish','Publish','N/A','N/A','N/A','N/A','On progress'],
+      index:0,
+      imgSlide:[],
+      parents:'',
+      imgRef:React.createRef(),
+      intervalId: setInterval(() => {}, 100),
     };
   }
 
   componentDidMount(){
     AOS.init()
     AOS.refresh()
+
+    this.setState({
+    intervalId:this.state.intervalId = setInterval(() => {
+      const imgRef = this.state.imgRef.current
+      imgRef.classList.remove('fadez')
+      console.log("ahalo");
+    return () => clearInterval(this.state.intervalId);
+    }, 1500)
+    })
   }
 
   modalImage = (e) => {
     e.preventDefault();
     const img = e.target.parentElement.parentElement.firstChild.src;
+    const parent =  e.target.parentElement.parentElement.firstChild
+    const indexes = parseInt(e.target.parentElement.parentElement.firstChild.dataset.index)
+
     this.setState({
       modal: !this.state.modal,
       images: (this.state.images = img),
+      index:this.state.index = indexes,
+      parents:this.state.parents = parent
     });
   };
 
   removeModal = (e) => {
     this.setState({ modal: false });
   };
+
+  nextSlide = e => {
+e.preventDefault()
+const imgRef = this.state.imgRef.current
+imgRef.classList.toggle('fadez')
+this.setState({
+  index:this.state.index = this.state.index + 1,
+  images:this.state.images = this.state.img[this.state.index]
+})
+
+if (this.state.index > this.state.img.length - 1) {
+  this.setState({
+    index:this.state.index = 0,
+    images:this.state.images = this.state.img[this.state.index]
+  })
+}
+  }
+
+  prevSlide = e => {
+    e.preventDefault()
+    const imgRef = this.state.imgRef.current
+imgRef.classList.add('fadez')
+    this.setState({
+      index:this.state.index = this.state.index - 1,
+      images:this.state.images = this.state.img[this.state.index]
+    })
+    
+    if (this.state.index <= 1) {
+      this.setState({
+        index:this.state.index = 7,
+        images:this.state.images = this.state.img[this.state.index]
+      })
+    }
+  }
+
+
   render() {
     return (
 <div className='pages-container'>
@@ -64,7 +119,7 @@ class ProjectPage extends React.Component {
 </p>
               </div>
             <h2 className="sub-judul">
-             A small gallery of my recent projects.
+             A small gallery of my recent projects.npm
             </h2>
           </div>
           <div className="project-inner">
@@ -79,8 +134,9 @@ class ProjectPage extends React.Component {
              class="card"
              data-aos="fade-up"
              data-aos-duration="1500"
+             key={index}
            >
-             <img src={img} class="card__image" alt="" />
+             <img src={img} class="card__image" alt="" data-index={index}/>
              <div class="card__overlay">
                <div class="card__header">
                  <div class="card__header-text">
@@ -108,12 +164,15 @@ class ProjectPage extends React.Component {
            }
             </ul>
           </div>
+
         </div>
+        {/* END PROJECT INNER */}
         <div
           className={this.state.modal ? "modals" : "modal-container"}
-          onClick={this.removeModal}
         >
-          {this.state.modal ? <ModalImage images={this.state.images} /> : ""}
+          {this.state.modal ? <ModalImage images={this.state.images} nextSlide={this.nextSlide}
+            prevSlide={this.prevSlide} imgRef={this.state.imgRef} close={this.removeModal}
+          /> : ""}
         </div>
       </div>
     );
@@ -121,3 +180,6 @@ class ProjectPage extends React.Component {
 }
 
 export default ProjectPage;
+
+
+

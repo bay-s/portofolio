@@ -189,7 +189,7 @@ class Contact extends React.Component {
                         </div>
                         <div className="text pl-3">
                           <p>
-                            <span>Address : </span> Kp Pulo Ceger, Jalan Bonjol , RT.2/RW.3, Jaka Setia, Bekasi Selatan
+                            <span>Address : </span> Bekasi Selatan
                             </p>
                         </div>
                       </div>
@@ -198,7 +198,7 @@ class Contact extends React.Component {
                           <span className="fa fa-phone"></span>
                         </div>
                         <div  classnName="text pl-3">
-                            <span>Phone:</span>{" "}
+                            <span>Phone:</span>
                             <a href="https://web.whatsapp.com/" target="_blank">
                               +62 89 644 814 801
                             </a>

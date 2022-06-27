@@ -196,7 +196,7 @@ this.setState({
      </div>
           <div className="arrow-container"  data-aos="fade-left">
             <i
-              class="fa fa-long-arrow-left lefts"
+              className="fa fa-long-arrow-left lefts"
               aria-hidden="true"
               style={
                 this.state.index < 1
@@ -206,7 +206,7 @@ this.setState({
               onClick={this.prevSlide}
             ></i>
             <i
-              class="fa fa-long-arrow-right rights"
+              className="fa fa-long-arrow-right rights"
               aria-hidden="true"
               style={
                 this.state.index > 7
