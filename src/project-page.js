@@ -25,7 +25,6 @@ class ProjectPage extends React.Component {
       status:['Publish','Publish','Publish','N/A','N/A','N/A','N/A','On progress'],
       index:0,
       imgSlide:[],
-      parents:'',
       imgRef:React.createRef(),
       intervalId: setInterval(() => {}, 100),
     };
@@ -47,19 +46,17 @@ class ProjectPage extends React.Component {
   modalImage = (e) => {
     e.preventDefault();
     const img = e.target.parentElement.parentElement.firstChild.src;
-    const parent =  e.target.parentElement.parentElement.firstChild
     const indexes = parseInt(e.target.parentElement.parentElement.firstChild.dataset.index)
 
     this.setState({
       modal: !this.state.modal,
       images: (this.state.images = img),
-      index:this.state.index = indexes,
-      parents:this.state.parents = parent
+      index:this.state.index = indexes
     });
   };
 
   removeModal = (e) => {
-    this.setState({ modal: false });
+    this.setState({ modal:this.state.modal = false });
   };
 
   nextSlide = e => {
@@ -118,7 +115,7 @@ imgRef.classList.add('fadez')
 </p>
               </div>
             <h2 className="sub-judul">
-             A small gallery of my recent projects.npm
+             A small gallery of my recent projects.
             </h2>
           </div>
           <div className="project-inner">
