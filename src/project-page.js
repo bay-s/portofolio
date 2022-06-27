@@ -85,7 +85,7 @@ imgRef.classList.add('fadez')
       images:this.state.images = this.state.img[this.state.index]
     })
     
-    if (this.state.index <= 1) {
+    if (this.state.index < 0){
       this.setState({
         index:this.state.index = 7,
         images:this.state.images = this.state.img[this.state.index]
