@@ -9,6 +9,7 @@ import img3 from "./img/test3.jfif"
 import img4 from "./img/ramayana.png"
 import img5 from "./img/test2.jfif"
 import img6 from "./img/test5.png"
+import forums from "./img/forums.png"
 import AOS from 'aos'
 
 class ProjectPage extends React.Component {
@@ -17,12 +18,12 @@ class ProjectPage extends React.Component {
     this.state = {
       images: "",
       modal: false,
-      link:["https://sdmasjidsyuhada.sch.id/","https://bay-s.github.io/","https://github.com/bay-s/tema-wordpress-1","#","#","#","#","#"],
-      img:[movie,webSd,theme,img2,img3,img4,img5,img6],
-      judul:['React Movie App','Website SD','Tema Wordpress','Lorem ipsum, dolor',' Quibusdam odio','adipisci cupiditate. Minima!','voluptate nesciunt','voluptate nesciunt beatae earum'],
-      desc:['Personal Project dibuat dengan React dan TMDB API','Website SD berbasis Wordpress',
-      'Tema wordpress','illo voluptate nesciunt beatae earum',' beatae earum quo adipisci cupiditate. Minima!','ipsum alias incidunt sed explicabo velit nostrum,',' Quibusdam odio, a dolore voluptatem, accusamus','earum quo adipisci cupiditate. Minima'],
-      status:['Publish','Publish','Publish','N/A','N/A','N/A','N/A','On progress'],
+      link:["https://sdmasjidsyuhada.sch.id/","https://bay-s.github.io/","https://github.com/bay-s/tema-wordpress-1","https://simple-forums.netlify.app","#","#","#","#","#"],
+      img:[movie,webSd,theme,forums ,img2,img3,img4,img5,img6],
+      judul:['React Movie App','Website SD','Tema Wordpress','Simple Forum','Lorem ipsum, dolor',' Quibusdam odio','adipisci cupiditate. Minima!','voluptate nesciunt','voluptate nesciunt beatae earum'],
+      desc:['Personal Project created with React and TMDB API','School website create with Wordpress',
+      'Wordpress themes','Simple forums created with React and Firebase','illo voluptate nesciunt beatae earum',' beatae earum quo adipisci cupiditate. Minima!','ipsum alias incidunt sed explicabo velit nostrum,',' Quibusdam odio, a dolore voluptatem, accusamus','earum quo adipisci cupiditate. Minima'],
+      status:['Publish','Publish','Publish','Publish','N/A','N/A','N/A','N/A','On progress'],
       index:0,
       imgSlide:[],
       imgRef:React.createRef(),
@@ -85,7 +86,7 @@ imgRef.classList.add('fadez')
       images:this.state.images = this.state.img[this.state.index]
     })
     
-    if (this.state.index <= 1) {
+    if (this.state.index < 0) {
       this.setState({
         index:this.state.index = 7,
         images:this.state.images = this.state.img[this.state.index]

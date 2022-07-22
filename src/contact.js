@@ -1,5 +1,8 @@
 import React from "react";
 import AOS from "aos";
+import MapsCard from "./maps";
+
+
 
 class Contact extends React.Component {
   constructor() {
@@ -94,6 +97,7 @@ e.target.reset();
   render() {
     return (
       <div className="contact-page">
+<MapsCard />
       <section
         classnName="ftco-sections"
         data-aos="fade-up"
