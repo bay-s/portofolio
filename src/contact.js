@@ -228,7 +228,7 @@ e.target.reset();
                         </div>
                         <div  classnName="text pl-3">
                             <span>Phone:</span>
-                            <a href="https://web.whatsapp.com/" target="_blank">
+                            <a href="https://wa.me/629644814801" target="_blank">
                               +62 89 644 814 801
                             </a>
                         </div>
