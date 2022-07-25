@@ -54,7 +54,7 @@ function AboutPage (){
 </p>
               </div>
      <div className='text'>
-     <p>Born in Bekasi in 1994.</p>
+     <p>Born in Bekasi 1994.</p>
    <p>Since 2020, he has also started working as a Web Developer and Wordpress as an freelancer.</p>
    <p>He also learning NodeJS and looking forward to be a Full Stack Web Developer.</p>
      </div>
