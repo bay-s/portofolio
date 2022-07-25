@@ -71,7 +71,7 @@ function AboutPage (){
     <div class="card__icon"><i class="fa fa-tasks" aria-hidden="true"></i></div>
     <h3>{data}</h3>
     <div class="card__icon"><i class="fa fa-check" aria-hidden="true"></i></div>
-</div>
+</div> 
 })}
 </div>
 
