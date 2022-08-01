@@ -4,8 +4,8 @@ import ModalImage from "./modal";
 import movie from "./img/react-movie.png";
 import webSd from "./img/website-sd.png";
 import theme  from "./img/screenshot.png"
-import img2 from "./img/test1.jfif"
-import img3 from "./img/test3.jfif"
+import img2 from "./img/blogs.png"
+import img3 from "./img/tema-undangan.PNG"
 import img4 from "./img/ramayana.png"
 import img5 from "./img/test2.jfif"
 import img6 from "./img/test5.png"
@@ -18,11 +18,11 @@ class ProjectPage extends React.Component {
     this.state = {
       images: "",
       modal: false,
-      link:["https://sdmasjidsyuhada.sch.id/","https://bay-s.github.io/","https://github.com/bay-s/tema-wordpress-1","https://simple-forums.netlify.app","#","#","#","#","#"],
+      link:["https://sdmasjidsyuhada.sch.id/","https://bay-s.github.io/","https://github.com/bay-s/tema-wordpress-1","https://simple-forums.netlify.app","https://github.com/bay-s/tema-wordpress-blog","https://twostories.id/demo/Fireflies#","#","#","#"],
       img:[movie,webSd,theme,forums ,img2,img3,img4,img5,img6],
-      judul:['React Movie App','Website SD','Tema Wordpress','Simple Forum','Lorem ipsum, dolor',' Quibusdam odio','adipisci cupiditate. Minima!','voluptate nesciunt','voluptate nesciunt beatae earum'],
+      judul:['React Movie App','Website SD','Wordpress Themes 1','Simple Forum','Wordpress Themes 2','Template Undangan Online','adipisci cupiditate. Minima!','voluptate nesciunt','voluptate nesciunt beatae earum'],
       desc:['Personal Project created with React and TMDB API','School website create with Wordpress',
-      'Wordpress themes','Simple forums created with React and Firebase','illo voluptate nesciunt beatae earum',' beatae earum quo adipisci cupiditate. Minima!','ipsum alias incidunt sed explicabo velit nostrum,',' Quibusdam odio, a dolore voluptatem, accusamus','earum quo adipisci cupiditate. Minima'],
+      'Wordpress themes','Simple forums created with React and Firebase','Wordpress Themes For Blog','Wedding Template','ipsum alias incidunt sed explicabo velit nostrum,',' Quibusdam odio, a dolore voluptatem, accusamus','earum quo adipisci cupiditate. Minima'],
       status:['Publish','Publish','Publish','Publish','N/A','N/A','N/A','N/A','On progress'],
       index:0,
       imgSlide:[],
