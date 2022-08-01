@@ -23,7 +23,7 @@ class ProjectPage extends React.Component {
       judul:['React Movie App','Website SD','Wordpress Themes 1','Simple Forum','Wordpress Themes 2','Template Undangan Online','adipisci cupiditate. Minima!','voluptate nesciunt','voluptate nesciunt beatae earum'],
       desc:['Personal Project created with React and TMDB API','School website create with Wordpress',
       'Wordpress themes','Simple forums created with React and Firebase','Wordpress Themes For Blog','Wedding Template','ipsum alias incidunt sed explicabo velit nostrum,',' Quibusdam odio, a dolore voluptatem, accusamus','earum quo adipisci cupiditate. Minima'],
-      status:['Publish','Publish','Publish','Publish','N/A','N/A','N/A','N/A','On progress'],
+      status:['Publish','Publish','Publish','Publish','Publish','Publish','N/A','N/A','On progress'],
       index:0,
       imgSlide:[],
       imgRef:React.createRef(),
