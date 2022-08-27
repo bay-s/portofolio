@@ -229,7 +229,6 @@ e.target.reset();
                         <div  classnName="text pl-3">
                             <span>Phone:</span>
                             <a href="https://wa.me/629644814801" target="_blank">
-                              +62 89 644 814 801
                             </a>
                         </div>
                       </div>
