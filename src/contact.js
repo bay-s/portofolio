@@ -224,11 +224,13 @@ e.target.reset();
                       </div>
                       <div className="dbox w-100 d-flex align-items-center">
                         <div className="icon d-flex align-items-center justify-content-center">
+                        <a href="https://wa.me/629644814801" target="_blank">
                           <span className="fa fa-phone"></span>
+                          </a>
                         </div>
                         <div  classnName="text pl-3">
+                        <a href="https://wa.me/629644814801" target="_blank">
                             <span>Phone:</span>
-                            <a href="https://wa.me/629644814801" target="_blank">
                             </a>
                         </div>
                       </div>
